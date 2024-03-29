@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .box {
+            font-size: 30px;
+            color: #F7DF1E;
+            height: 100vh;
+            width: 100vw;
+            border-radius: 10px;
+            background: #191919;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-weight: bolder;
+        }
+
+        .buttons-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 50px;
+            width: 250px;
+        }
+
+        button {
+            height: 40px;
+            width: 100px;
+            background: white;
+            color: black;
+            font-weight: 600;
+            border-radius: 5px;
+            border: 2px solid black;
+            cursor: pointer;
+        }
+    </style>
+    <title>Pedido Irrecusável</title>
+</head>
+<body>
+    <div class="box">
+        <p>C*zinho hoje?</p>
+        <div class="buttons-container">
+            <button><a href="https://www.youtube.com/watch?v=a8c5wmeOL9o&ab_channel=Dylancliff111">Sim</a></button>
+            <button id="no">Não</button>
+        </div>
+    </div>
+</body>
+<script>
+    let button = document.getElementById('no');
+    let height = window.innerHeight - 100;
+    let width = window.innerWidth - 100;
+
+    button.addEventListener('mouseover', function () {
+        button.style.position = "absolute"
+        button.style.top = Math.random() * height + "px";
+        button.style.left = Math.random() * width + "px";
+    })
+</script>
+</html>
